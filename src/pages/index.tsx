@@ -9,6 +9,7 @@ import {BsFillHouseFill} from 'react-icons/bs'
 import {GiAfrica} from 'react-icons/gi'
 import {FaCarrot} from 'react-icons/fa'
 import {MdOutlineNoDrinks}  from 'react-icons/md'
+import ResturantCard from '@/shared/ResturantCard/ResturantCard'
 export default function Home() {
   const isLaptop = useMediaQuery({
     query: '(min-width: 600px)'
@@ -67,6 +68,14 @@ export default function Home() {
         <br />
         <br />
         <h2>All Restaurants</h2>
+        <br />
+        <Box css={{'display':'flex','flexWrap':'wrap','gap':'20px'}}>
+          {
+            [...new Array(10)].map((d,index)=>(
+              <ResturantCard  key={index}/>
+            ))
+          }
+        </Box>
         </Box>
       </Box>
     </>
