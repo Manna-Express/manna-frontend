@@ -7,5 +7,5 @@ export const NavBarContainer = styled('div',{
     'display':'flex',
     'alignItems':'center',
     'justifyContent':'space-between',
-
+    borderBottom:'1px solid rgb(229, 231, 235)'
 })  

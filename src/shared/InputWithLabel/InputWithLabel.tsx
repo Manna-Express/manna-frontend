@@ -9,7 +9,7 @@ const InputWithLabel = ()=>{
     return (
         <InputWithLabelContainer>
             <BiSearchAlt />
-            <input type="text" />
+            <input type="text" placeholder="Search Manna Express.." />
         </InputWithLabelContainer>
     )
 }

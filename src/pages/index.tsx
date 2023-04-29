@@ -1,10 +1,14 @@
 import Box from '@/shared/Box'
+import Category from '@/shared/Category/Category'
 import InputWithLabel from '@/shared/InputWithLabel/InputWithLabel'
 import NavBar from '@/shared/NavBar/NavBar'
 import Head from 'next/head'
 import Image from 'next/image'
 import { useMediaQuery } from 'react-responsive'
-
+import {BsFillHouseFill} from 'react-icons/bs'
+import {GiAfrica} from 'react-icons/gi'
+import {FaCarrot} from 'react-icons/fa'
+import {MdOutlineNoDrinks}  from 'react-icons/md'
 export default function Home() {
   const isLaptop = useMediaQuery({
     query: '(min-width: 600px)'
@@ -25,6 +29,44 @@ export default function Home() {
           <InputWithLabel />:''
         }
 
+        {/* this is where the index code start take the code above to a layout */}
+        <br /><br />
+        <Box>
+            <h2>Explore Categories</h2>
+          <br />
+          <Box css={{
+            'maxWidth':'600px','display':'flex','justifyContent':'space-between',
+            'overflowX':'auto',
+            'gap':'30px'
+        }}>
+        <Category 
+          title='Restaurants'
+          icon={<BsFillHouseFill/>}
+        />
+         <Category 
+            title='African Meals'
+            icon={<GiAfrica style={{'color':'#115442'}}/>}
+            color='yellow'
+            />
+         <Category 
+            title='Fit Fam'
+            color='green'
+
+          icon={<FaCarrot style={{'color':'#eb5d3d'}}/>}
+        />
+         <Category 
+        title='Drinks'
+        color='yellow2'
+
+          icon={<MdOutlineNoDrinks style={{'color':'#e9841a'}}/>}
+        />
+
+        
+          </Box>
+        </Box>
+        <br />
+        <br />
+        <h2>All Restaurants</h2>
         </Box>
       </Box>
     </>
