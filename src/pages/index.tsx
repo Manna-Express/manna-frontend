@@ -1,8 +1,14 @@
+import Box from '@/shared/Box'
+import InputWithLabel from '@/shared/InputWithLabel/InputWithLabel'
+import NavBar from '@/shared/NavBar/NavBar'
 import Head from 'next/head'
 import Image from 'next/image'
-
+import { useMediaQuery } from 'react-responsive'
 
 export default function Home() {
+  const isLaptop = useMediaQuery({
+    query: '(min-width: 600px)'
+  })
   return (
     <>
       <Head>
@@ -11,9 +17,16 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div>
-        <h1>hello world</h1>
-      </div>
+      <Box>
+        <NavBar />
+        <Box css={{'padding':'.7rem'}}>
+        {
+          !isLaptop?
+          <InputWithLabel />:''
+        }
+
+        </Box>
+      </Box>
     </>
   )
 }
