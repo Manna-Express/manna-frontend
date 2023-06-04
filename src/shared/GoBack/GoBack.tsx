@@ -11,7 +11,7 @@ const GoBack = ():React.ReactElement=>{
         <Button
                 css={{
                     'backgroundColor':'transparent',color:'$green300',
-                    // 'padding':'unset',
+                    'padding':'.4rem',
                 '&:hover,&:focus':{
                     'backgroundColor':'transparent',color:'$green300',
                 },
