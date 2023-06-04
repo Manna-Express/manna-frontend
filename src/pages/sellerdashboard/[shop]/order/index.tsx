@@ -1,8 +1,8 @@
 import { NextPage } from 'next';
 import { useRouter } from 'next/router';
-import { prop_columnsType } from '..';
+import { prop_columnsType } from '../..';
 import {AiTwotoneEye} from 'react-icons/ai'
-import Table from '../../../shared/Table/Table';
+import Table from '../../../../shared/Table/Table';
 import { useEffect } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import Pane from "@/shared/Pane";

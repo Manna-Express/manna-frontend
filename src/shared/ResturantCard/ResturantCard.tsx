@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { ResturantCardContianer } from "./ResturantCard.style"
+import { ListOfOffering, ResturantCardContianer } from "./ResturantCard.style"
 import ShopImg from '@/assets/shop.png'
 import Box from "../Box"
 import {AiTwotoneStar} from 'react-icons/ai'
@@ -24,11 +24,11 @@ const ResturantCard = ():React.ReactElement=>{
                     <IoTimerOutline />
                     <p>22 - 23 mins</p>
                 </Box>
-                <Box className="list_of_offering">
+                <ListOfOffering>
                     <p>Rice & Stew</p>
                     <p>FRUITS</p>
                     <p>SANDWICHES</p>
-                </Box>
+                </ListOfOffering>
             </Box>
         </ResturantCardContianer>
     )

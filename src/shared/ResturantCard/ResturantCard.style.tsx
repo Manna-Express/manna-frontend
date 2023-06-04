@@ -45,13 +45,15 @@ export const ResturantCardContianer = styled('div',{
 
 
     },
-    '.list_of_offering':{
-        'padding':'.4rem 0',
-        'fontSize':'.8rem',
-        'display':'flex',
-        'flexWrap':'wrap',
-        'justifyContent':'space-between',
-        'alignItems':'center',
-        'color':'$green100'
-    }
+    // '.list_of_offering':
+})
+
+export const ListOfOffering = styled('div',{
+    'padding':'.4rem 0',
+    'fontSize':'.8rem',
+    'display':'flex',
+    'flexWrap':'wrap',
+    'justifyContent':'space-between',
+    'alignItems':'center',
+    'color':'$green100'
 })

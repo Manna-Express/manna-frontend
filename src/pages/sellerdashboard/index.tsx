@@ -5,13 +5,15 @@ import {GoPencil} from 'react-icons/go'
 import Table from '../../shared/Table/Table'
 import Pane from "@/shared/Pane";
 import { useMediaQuery } from "react-responsive";
+import Button from "@/shared/Button/Button";
+import { useRouter } from "next/router";
 export type prop_columnsType ={Header:string,accessor?:string,Cell?:any,id?:any}
 
 
 
 const Index:NextPage = ()=>{
     const isLaptop = useMediaQuery({ query: '(min-width: 700px)' });
-
+  const route = useRouter()
     const prop_columns:prop_columnsType[] = [
         {
           Header:'Image ',
@@ -63,10 +65,17 @@ const Index:NextPage = ()=>{
         >
                 <Pane>
         {/* {status=='pending'&&<h1>loading</h1>} */}
-        <button
+        {/* <button
         style={{'width':isLaptop?'20%':'80%'}} 
-        // onClick={(e)=>route.push(`/dashboard/shop/${shop}/create-product`)}
-        >Create Product</button>
+        onClick={(e)=>route.push(`/dashboard/shop/${shop}/create-product`)}
+        >Create Product</button> */}
+        <Button
+        onClick={(e)=>route.push(`/sellerdashboard/1/create-product`)}
+
+        // color='defualt'
+        >
+          Create Product
+        </Button>
         <br />
         <br />
         <Table prop_columns={prop_columns}
